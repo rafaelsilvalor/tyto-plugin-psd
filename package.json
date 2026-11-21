@@ -1,0 +1,44 @@
+{
+  "name": "tyto-plugin-psd",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "A Tyto plugin that decodes a .psd file, or one of its layers, into a PNG a brief can draw.",
+  "packageManager": "pnpm@11.27.0",
+  "engines": {
+    "node": "^22.22.2 || ^24.15 || >=26"
+  },
+  "files": [
+    "tyto-plugin.json",
+    "THIRD-PARTY-LICENSES.md",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "check": "pnpm format:check && pnpm typecheck && pnpm lint && pnpm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.2",
+    "@types/pako": "^2.0.4",
+    "@types/pngjs": "^6.0.5",
+    "@tyto/plugin-api": "npm:@rafaelsilvalor/tyto-plugin-api@^0.28.1",
+    "ag-psd": "34.2.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "pako": "2.1.0",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.9.9",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.1",
+    "vitest": "^5.0.1"
+  }
+}
